@@ -24,7 +24,6 @@ class Program
             Console.WriteLine("9. Mostrar peso do Notebook");
             Console.WriteLine("0. Sair");
             Console.Write("Opção: ");
-
             int opcao = Convert.ToInt32(Console.ReadLine());
 
             switch (opcao)
