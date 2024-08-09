@@ -13,9 +13,9 @@ namespace E2.Classes
         public double Valor { get; set; }
         public int Ano { get; set; }
         public string Placa { get; set; }
-        public string TipoCombustivel { get; set; }
+        public Combustivel TipoCombustivel { get; set; } // Alterado para usar a classe Combustivel
 
-        public Caminhao(string modelo, double valor, int ano, string placa, string tipoCombustivel)
+        public Caminhao(string modelo, double valor, int ano, string placa, Combustivel tipoCombustivel)
         {
             Modelo = modelo;
             Valor = valor;
@@ -31,7 +31,7 @@ namespace E2.Classes
             Console.WriteLine($"Valor: {Valor:C}");
             Console.WriteLine($"Ano: {Ano}");
             Console.WriteLine($"Placa: {Placa}");
-            Console.WriteLine($"Tipo de Combustível: {TipoCombustivel}");
+            TipoCombustivel.ExibirInformacoes(); // Chama o método da classe Combustivel
         }
     }
 }

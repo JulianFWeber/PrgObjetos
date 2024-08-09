@@ -17,10 +17,12 @@ namespace E2
             var novaPessoaJuridica = new PessoaJuridica("Weber Seg", "12.345.678/0001-90", "Corretora");
             novaPessoaJuridica.ExibirInformacoes();
 
-            var carro = new Carro("Jeppao", 125700, 2018, "RYS8G49", "Gasolina");
+            var gasolina = new Combustivel("Gasolina", 5.50);
+            var carro = new Carro("Jeepão", 125700, 2018, "RYS8G49", gasolina);
             carro.ExibirInformacoes();
 
-            var caminhao = new Caminhao("Constellation 24250", 178106, 2011, "XYZ-5678", "Diesel");
+            var diesel = new Combustivel("Diesel", 6.00);
+            var caminhao = new Caminhao("Constellation 24250", 178106, 2011, "XYZ-5678", diesel);
             caminhao.ExibirInformacoes();
 
             var apartamento = new Apartamento("Solido", 300000);
