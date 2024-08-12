@@ -8,9 +8,8 @@ namespace E2.Classes
         public double Valor { get; set; }
         public int Ano { get; set; }
         public string Placa { get; set; }
-        public Combustivel TipoCombustivel { get; set; } // Alterado para usar a classe Combustivel
+        public Combustivel TipoCombustivel { get; set; } 
 
-        // Construtor
         public Carro(string modelo, double valor, int ano, string placa, Combustivel tipoCombustivel)
         {
             Modelo = modelo;
@@ -20,14 +19,13 @@ namespace E2.Classes
             TipoCombustivel = tipoCombustivel;
         }
 
-        // Implementação da void ExibirInformacoes()
         public void ExibirInformacoes()
         {
             Console.WriteLine($"Modelo: {Modelo}");
             Console.WriteLine($"Valor: {Valor:C}");
             Console.WriteLine($"Ano: {Ano}");
             Console.WriteLine($"Placa: {Placa}");
-            TipoCombustivel.ExibirInformacoes(); // Chama o método da classe Combustivel
+            TipoCombustivel.ExibirInformacoes(); 
         }
     }
 }
