@@ -1,16 +1,29 @@
-﻿namespace E2.Classes
+﻿using E2.Interfaces;
+
+namespace E2.Classes
 {
-    public class PessoaFisica : Pessoa
+    public class PessoaFisica : IPessoa
     {
-        public string Sexo { get; set; }
-        public PessoaFisica(string nome, string cpfCnpj, String sexo)
-            : base(nome, cpfCnpj)
+        public string Nome { get; set; }
+        public string Cpf { get; set; }
+        public string Documento
         {
+            get { return Cpf; }
+            set { Cpf = value; }
+        }
+
+        public string Sexo { get; set; }
+
+        public PessoaFisica(string nome, string cpf, string sexo)
+        {
+            Nome = nome;
+            Cpf = cpf;
             Sexo = sexo;
         }
-        public override void ExibirInformacoes()
+
+        public void ExibirInformacoes()
         {
-            Console.WriteLine($"Nome: {Nome}, CPF: {CPF_CNPJ}, Sexo: {Sexo}");
+            Console.WriteLine($"Nome: {Nome}, CPF: {Cpf}, Sexo: {Sexo}");
         }
     }
 }

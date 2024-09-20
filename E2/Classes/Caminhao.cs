@@ -25,7 +25,7 @@ namespace E2.Classes
             Console.WriteLine($"Valor: {Valor:C}");
             Console.WriteLine($"Ano: {Ano}");
             Console.WriteLine($"Placa: {Placa}");
-            TipoCombustivel.ExibirInformacoes(); // Chama o método da classe Combustivel
+            TipoCombustivel.ExibirInformacoes();
         }
     }
 }

@@ -2,8 +2,8 @@
 {
     public class Combustivel
     {
-        public string Tipo { get; set; }
-        public double PrecoPorLitro { get; set; }
+        public string Tipo { get; private set; }
+        public double PrecoPorLitro { get; private set; }
 
         public Combustivel(string tipo, double precoPorLitro)
         {
