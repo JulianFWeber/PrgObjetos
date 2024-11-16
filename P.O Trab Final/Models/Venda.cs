@@ -1,4 +1,4 @@
-﻿namespace PeixariaProject.Models
+namespace PeixariaProject.Models
 {
     public class Venda
     {

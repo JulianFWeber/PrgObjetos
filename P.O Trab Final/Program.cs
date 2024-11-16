@@ -6,11 +6,11 @@ using PeixariaProject.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configurar o banco de dados em memória
+// Configurar o banco de dados em memï¿½ria
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseInMemoryDatabase("DBPeixaria"));
 
-// Adicionar serviços para controllers
+// Adicionar serviï¿½os para controllers
 builder.Services.AddControllers();
 // Configurar e adicionar Swagger
 builder.Services.AddEndpointsApiExplorer();
