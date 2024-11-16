@@ -1,21 +1,16 @@
-﻿namespace P.O_Trab_Final.Models
-{    public class Venda
+namespace PeixariaProject.Models
+{
+    public class Venda
     {
         public int Id { get; set; }
-        public Peixe PeixeVendido { get; set; }
-        public decimal PrecoFinal { get; set; }
+        public int PeixeId { get; set; }
+        public int QuantidadeVendida { get; set; }
+        public decimal PrecoTotal { get; set; }
 
-        public void CalcularDesconto()
+        // Chama função para calcular peixe possio desconto e retorna o preço total para multiplicar com a quantidade a ser vendida
+        public void CalcularPrecoTotal(Peixe peixe)
         {
-            if (PeixeVendido.TipoCriacao == "Aquicultura")
-            {
-                PrecoFinal = PeixeVendido.Preco * 0.80m;
-            }
-            else
-            {
-                PrecoFinal = PeixeVendido.Preco;
-            }
+            PrecoTotal = peixe.CalcularPrecoComDesconto() * QuantidadeVendida;
         }
     }
-
 }
