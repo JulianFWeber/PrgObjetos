@@ -40,7 +40,7 @@ namespace PeixariaProject.Validators
             // Aqui checamos se a quantidade de peixes é maior que zero. Se for menor ou igual a zero, lança um erro.
             if (peixeDto.Quantidade <= 0)
             {
-                throw new InvalidQty("Quantidade de peixes não pode ser 0 ou menos de 0");
+                throw new InvalidQty("Quantidade de peixes não pode ser 0 ou menos de 0");                
             }
 
             // E aqui verificamos se o preço do peixe é maior que zero. Preço negativo ou zero não é aceito.

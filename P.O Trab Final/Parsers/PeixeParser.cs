@@ -1,4 +1,5 @@
-﻿using PeixariaProject.DTOs;
+﻿using System.IO.Pipelines;
+using PeixariaProject.DTOs;
 using PeixariaProject.Models;
 
 namespace PeixariaProject.Parsers
@@ -28,7 +29,7 @@ namespace PeixariaProject.Parsers
         public Peixe ToEntity(PeixeDTO peixeDto)
         {
             return new Peixe
-            {
+            {               
                 Nome = peixeDto.Nome, // Copiamos o nome do DTO para o modelo
                 LocalCaptura = peixeDto.LocalCaptura, // Copiamos o local de captura
                 TipoCriacao = peixeDto.TipoCriacao, // Copiamos o tipo de criação

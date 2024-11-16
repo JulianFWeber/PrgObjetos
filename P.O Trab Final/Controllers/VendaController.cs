@@ -23,6 +23,7 @@ namespace PeixariaProject.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<VendaDTO>> GetAll()
         {
+            _logger.LogInformation("Procurando todas as vendas");
             return Ok(_service.GetAllVendas());
         }
 

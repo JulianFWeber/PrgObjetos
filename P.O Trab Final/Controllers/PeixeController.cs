@@ -12,6 +12,7 @@ namespace PeixariaProject.Controllers
     public class PeixeController : ControllerBase
     {
         private readonly PeixeService _service;
+        private readonly ILogger<PeixeController> _logger;
 
         // Construtor que recebe o contexto do banco e o logger.
         public PeixeController(ApplicationDbContext context, ILogger<PeixeController> logger)
@@ -39,7 +40,7 @@ namespace PeixariaProject.Controllers
         }
 
         // Método que adiciona um novo peixe.
-        [HttpPost] 
+        [HttpPost]
         public ActionResult Add(PeixeDTO peixeDto)
         {
             _service.AddPeixe(peixeDto); // Adiciona o peixe usando o serviço.
